@@ -1,4 +1,4 @@
-# hello-world
+# car magazine
 
 ## Project setup
 ```
