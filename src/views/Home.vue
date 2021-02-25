@@ -1,61 +1,31 @@
 <template>
-  <HelloWorld />
-  <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Car Magazine</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <footer class="container">
-    <p class="end"><a href="#">Back to top</a></p>
-    <p>
-      © 2021 Company, Inc. · <a href="#">Privacy</a> ·
-      <a href="#">Terms</a>
-    </p>
-  </footer>
+  <Header />
+  <hr class="featurette-divider" data-v-469af010="" />
+  <Carousel />
+  <hr class="featurette-divider" data-v-469af010="" />
+  <ThreeColumns />
+  <hr class="featurette-divider" data-v-469af010="" />
+  <Post />
+  <hr class="featurette-divider" data-v-469af010="" />
+  <Footer />
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Carousel from "@/components/Carousel.vue";
+import ThreeColumns from "@/components/ThreeColumns.vue";
+import Post from "@/components/Post.vue";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    Header,
+    Carousel,
+    ThreeColumns,
+    Post,
+    Footer,
   },
 };
 </script>
