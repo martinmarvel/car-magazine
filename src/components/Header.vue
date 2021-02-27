@@ -27,8 +27,8 @@
               >
             </li>
             <li class="nav-item">
-              <router-link to="/Shop"
-                ><a class="nav-link" href="#">SHOP</a></router-link
+              <router-link to="/NewPost"
+                ><a class="nav-link" href="#">NewPost</a></router-link
               >
             </li>
           </ul>

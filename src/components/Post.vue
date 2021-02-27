@@ -1,38 +1,54 @@
 <template>
   <div>
-    <div class="row featurette">
+    <div v-for="news in newsList" :key="news.id" class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">
-          First featurette heading.
-          <span class="text-muted">It’ll blow your mind.</span>
+          {{ news.title }}
+          <span class="text-muted">{{ news.previewText }}</span>
         </h2>
+        <br />
         <p class="lead">
-          Some great placeholder content for the first featurette here. Imagine
-          some exciting prose here.
+          {{ news.newsText }}
         </p>
       </div>
       <div class="col-md-5">
-        <svg
-          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-          width="500"
-          height="500"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#eee"></rect>
-          <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-        </svg>
+        <img :src="news.thumbnail" :alt="news.title" />
       </div>
+      <hr class="divider" />
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "Post",
+
+  data() {
+    return {
+      newsList: [],
+    };
+  },
+
+  created() {
+    axios
+      .get("/news.json")
+      .then((response) => {
+        // firebase den gelen data objesinin postList array ine aktarma işlemi
+        let data = response.data;
+        for (let key in data) {
+          this.newsList.push({ ...data[key], id: key });
+        }
+      })
+      .catch((e) => console.log(e));
+  },
 };
 </script>
+
+<style scoped>
+img {
+  width: 500px;
+  height: 500px;
+}
+</style>

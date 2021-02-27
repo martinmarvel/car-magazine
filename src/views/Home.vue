@@ -1,13 +1,16 @@
 <template>
-  <Header />
-  <hr class="featurette-divider" data-v-469af010="" />
-  <Carousel />
-  <hr class="featurette-divider" data-v-469af010="" />
-  <ThreeColumns />
-  <hr class="featurette-divider" data-v-469af010="" />
-  <Post />
-  <hr class="featurette-divider" data-v-469af010="" />
-  <Footer />
+  <div>
+    <hr class="divider" />
+    <Header />
+    <hr class="divider" />
+    <Carousel />
+    <hr class="divider" />
+    <ThreeColumns />
+    <hr class="divider" />
+    <Post />
+    <hr class="divider" />
+    <Footer />
+  </div>
 </template>
 
 <script>
