@@ -35,10 +35,9 @@ export default {
     axios
       .get("/news.json")
       .then((response) => {
-        // firebase den gelen data objesinin postList array ine aktarma işlemi
         let data = response.data;
         for (let key in data) {
-          this.newsList.push({ ...data[key], id: key });
+          this.newsList.unshift({ ...data[key], id: key });
         }
       })
       .catch((e) => console.log(e));
@@ -47,8 +46,13 @@ export default {
 </script>
 
 <style scoped>
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
 img {
-  width: 500px;
-  height: 500px;
+  height: 100%;
+  width: 100%;
 }
 </style>

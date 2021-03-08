@@ -41,9 +41,6 @@
                 Some representative placeholder content for the first slide of
                 the carousel.
               </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
-              </p>
             </div>
           </div>
         </div>
@@ -61,7 +58,6 @@
                 Some representative placeholder content for the second slide of
                 the carousel.
               </p>
-              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
             </div>
           </div>
         </div>
@@ -78,9 +74,6 @@
               <p>
                 Some representative placeholder content for the third slide of
                 this carousel.
-              </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
               </p>
             </div>
           </div>
@@ -111,9 +104,6 @@
 <script>
 export default {
   name: "Carousel",
-  props: {
-    msg: String,
-  },
 };
 </script>
 
@@ -134,12 +124,8 @@ a {
   color: #42b983;
 }
 
-.carousel-item {
-  width: 100%;
-  height: 600px;
-}
-
 img {
   height: 100%;
+  width: 100%;
 }
 </style>

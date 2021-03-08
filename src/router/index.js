@@ -14,6 +14,10 @@ const routes = [
     component: () =>
       import("../views/NewPost.vue")
   },
+
+
+
+  
 ];
 
 const router = createRouter({

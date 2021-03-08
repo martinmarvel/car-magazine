@@ -8,7 +8,6 @@
     <ThreeColumns />
     <hr class="divider" />
     <Post />
-    <hr class="divider" />
     <Footer />
   </div>
 </template>

@@ -48,12 +48,13 @@
             cols="30"
             rows="5"
             class="form-control"
-            placeholder="500 character max..."
+            placeholder="News..."
           ></textarea>
         </div>
       </div>
       <p>
         <button type="submit" class="btn btn-primary my-2">Save</button>
+        <br />
         <button @click="$router.push('/')" class="btn btn-secondary my-2">
           Cancel
         </button>
