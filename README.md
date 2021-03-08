@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 # car magazine
-=======
-# car-magazine
->>>>>>> 6ed75733a2b1871788f35732f32b0438800c08e7
+
 
 ## Project setup
 ```
